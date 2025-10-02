@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Player({ name, icon }) {
+export default function Player({ name, icon, isActive }) {
     //ive got to add an active class somewhere in this component
     const [ playerName, setPlayerName] = useState(name);
     const [ edit, setEdit ] = useState(false);

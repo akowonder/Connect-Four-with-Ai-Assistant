@@ -9,12 +9,12 @@ export default function App() {
     const [ activePlayer, setActivePlayer ] = useState("Red");
     
     function handleCellSelection() {
-        setActivePlayer(prevPlayer => activePlayer === 'Red' ? 'Yellow' : 'Red');
+        setActivePlayer(prevPlayer => prevPlayer === 'Red' ? 'Yellow' : 'Red');
     }
     return (
         <>
-          <PlayersDetails changeCell={handleCellSelection}/>
-          <GameBoard />
+          <PlayersDetails activePlayer={activePlayer} />
+          <GameBoard onSelectCell={handleCellSelection} acti />
         </>
     );
 }
